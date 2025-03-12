@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animate-gradient {
+    background-size: 200%;
+    animation: gradient 8s linear infinite;
+  }
+  
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .psychedelic-text {
+    text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff;
+    animation: psychedelic-pulse 3s ease-in-out infinite;
+  }
+
+  @keyframes psychedelic-pulse {
+    0%, 100% { transform: scale(1); filter: hue-rotate(0deg); }
+    50% { transform: scale(1.05); filter: hue-rotate(180deg); }
+  }
+
+}
